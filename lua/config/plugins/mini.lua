@@ -1,9 +1,31 @@
 return {
 	{
 		"echasnovski/mini.statusline",
-		config = function()
-			local statusline = require("mini.statusline")
-			statusline.setup({ use_icons = true })
-		end,
+		version = false,
+		opts = { use_icons = true },
+	},
+
+	{
+		"echasnovski/mini.files",
+		version = false,
+		opts = {
+			use_icons = true,
+			-- Opcional: configuramos ventanas para que se vean limpias
+			windows = {
+				width_focus = 30,
+			},
+		},
+		keys = {
+			{
+				"<leader>a",
+				function()
+					local MiniFiles = require("mini.files")
+					if not MiniFiles.close() then
+						MiniFiles.open()
+					end
+				end,
+				desc = "Xplore Mini",
+			},
+		},
 	},
 }
