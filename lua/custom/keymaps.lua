@@ -5,6 +5,8 @@ vim.g.maplocalleader = "\\"
 local opts = { noremap = true, silent = true }
 
 -- [[ Basic Keymaps ]]
+
+vim.keymap.set("n", "<leader>mt", "<cmd>RenderMarkdown toggle<cr>", { desc = "Toggle Markdown Render" })
 vim.keymap.set("v", "P", '"_dP', { desc = "Paste without yanking" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
 
@@ -52,7 +54,7 @@ vim.keymap.set("n", "N", "Nzzzv", opts)
 -- Splits enhancements
 vim.keymap.set("n", "<leader>v", "<C-w>v", { desc = "Split vertically" })
 vim.keymap.set("n", "<leader>h", "<C-w>s", { desc = "Split horizontally" })
-vim.keymap.set("n", "<leader>s", "<C-w>=", { desc = "Split equal size" })
+vim.keymap.set("n", "<leader>=", "<C-w>=", { desc = "Split equal size" })
 vim.keymap.set("n", "<leader>c", ":close<CR>", { desc = "Close split" })
 
 -- Indent
