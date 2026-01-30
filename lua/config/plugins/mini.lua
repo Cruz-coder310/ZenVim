@@ -11,9 +11,9 @@ return {
 		opts = {
 			use_icons = true,
 			-- Opcional: configuramos ventanas para que se vean limpias
-			windows = {
-				width_focus = 30,
-			},
+			-- windows = {
+			-- 	width_focus = 30,
+			-- },
 		},
 		keys = {
 			{
